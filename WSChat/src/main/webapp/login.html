@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8>
+   <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+
+   <title>Bisrope LogIn</title>
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="CSS/logCSS/main.css">
+   <script type="text/javascript" src="JS/loginJS.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="BisropeLogo">
+            <div class="container">
+                <div class="logo">
+                    <img src="Images/bisropeLowVis.png" class="logo_img" width="100" height="100">
+                </div>
+                
+            </div>
+
+
+        </div>
+    </header>
+
+    <div class="Login-container">
+        <div class="LoginContainer active">
+            <div class="LoginTitle">
+                <h1 class="LoginTitleText">Log In</h1>
+            </div>
+            <div class="UsernameInput">
+                <input type="text" id="username" placeholder=" " required>
+                <label for="">Username</label >
+                <!--When the user presses the enter key, the value of the username is stored as a variable to be passed to the createUser method in the loginJS.js script-->
+            </div>
+
+            <div class="PasswordInput">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="">Password</label>
+                <!--When the user presses the enter key, the value of the password is stored as a variable to be passed to the createUser method in the loginJS.js script-->
+            </div>
+
+            <div class="LoginButton">
+                <button id="login" onclick="logIn()">Log In</button>
+            </div>
+            <div class="options">
+                <div class="register">
+                    <p>Don't have an account? <a href="#" onclick="NewAccount()">Register</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="CreateContainer">
+            <div class="CreateTitle">
+                <h1 class="CreateTitleText">Create Account</h1>
+            </div>
+            <div class="CreateUsernameInput">
+                <input type="text" id="createusername" placeholder=" " required>
+                <label for="">Username</label>
+                <!--When the user presses the enter key, the value of the username is stored as a variable to be passed to the createUser method in the loginJS.js script-->
+            </div>
+
+            <div class="PasswordInput">
+                <input type="password" id="createpassword" placeholder=" " required>
+                <label for="">Password</label>
+                <!--When the user presses the enter key, the value of the password is stored as a variable to be passed to the createUser method in the loginJS.js script-->
+            </div>
+
+            <div class="LoginButton">
+                <button id="login" onclick="createUser()">Create Account</button>
+            </div>
+            <div class="createMessage", id="createMessageResponse"></div>
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript src="JS/loginJS.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BisRope Chat Application</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/DemoStyle.css" rel="stylesheet"/>
+    <link href="CSS/blobs.css" rel="stylesheet"/>
+    <link href="CSS/chat.css" rel="stylesheet"/>
+    <link href="CSS/tabs.css" rel="stylesheet"/>
+    <link href="CSS/about.css" rel="stylesheet"/>
+    <link href="CSS/dm.css" rel="stylesheet"/>
+    <script defer src="JS/directmessagingJS.js"></script>
+    <script defer src="JS/tab.js"></script>
+    <script defer src="JS/effects.js"></script>
+    <script defer src="JS/renderMessage.js"></script>
+</head>
+<body>
+
+<a href="videoCall.html">
+    <button class="JoinVideoCall" id="leave-btn">Enter Video Call</button>
+</a>
+
+<div class="container">
+    <div class="logo">
+        <img src="Images/bisropeLowVis.png" class="logo_img" width="350" height="235" onclick="goBack()">
+    </div>
+    <div class="title">
+        <h2>BisRope</h2>
+        <h2>BisRope</h2>
+    </div>
+</div>
+
+
+<!--Div container holds the content of each page with a corresponing tab button -->
+<div class = "tab-content">
+
+    <!--The three images that are animated on the homepage-->
+    <img id="elblobbo2" src="Images/blob2.svg" class="blob2" width="100" height="70">
+    <img id="elblobbo3" src="Images/blob3.svg" class="blob3" width="200" height="200">
+
+
+    <div class="ChatBox">
+        <div class="ChatSpace" >
+            <div class="textArea" >
+                <div class="Message">
+                </div>
+            </div>
+        </div>
+        <div class="inputArea">
+            <input autocomplete="off" title="Chat Input" placeholder="Message" id="inputText" onfocus="hideEmojiPanel()" type="text" autofocus/>
+        </div>
+    </div>
+    <div class="imgbtn">
+        <a onclick="ChooseImage()">
+            Img
+            <input type="file" id="imageFile" onchange="SendImage(this);" accept="image/*" style="display: none"/>
+        </a>
+    </div>
+    <div class="emojiButton">
+        <a onclick="showEmojiPanel()">&#128512;</a>
+    </div>
+    <div class="emoji-container">
+        <a onclick="getEmoji(this)">&#128557;</a>
+        <a onclick="getEmoji(this)">&#128526;</a>
+        <a onclick="getEmoji(this)">&#128512;</a>
+        <a onclick="getEmoji(this)">&#128514;</a>
+        <a onclick="getEmoji(this)">&#129313;</a>
+        <a onclick="getEmoji(this)">&#129299;</a>
+        <a onclick="getEmoji(this)">&#128151;</a>
+        <a onclick="getEmoji(this)">&#128077;</a>
+        <a onclick="getEmoji(this)">&#129324;</a>
+        <a onclick="getEmoji(this)">&#128564;</a>
+    </div>
+</div>
+</body>
+</html>
